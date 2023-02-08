@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model b15 {
+  dutyNumber      String @id @db.VarChar(6)
+  bookOnLocation  String @db.VarChar(3)
+  bookOnTime      String @db.VarChar(8)
+  bookOffTime     String @db.VarChar(8)
+  bookOffLocation String @db.VarChar(3)
+  duration        String @db.VarChar(4)
+  remarks         String @db.VarChar(30)
+}
+
+model z14 {
+  dutyNumber      String  @id @db.VarChar(6)
+  bookOnLocation  String  @db.VarChar(3)
+  bookOnTime      String  @db.VarChar(8)
+  bookOffTime     String  @db.VarChar(8)
+  bookOffLocation String  @db.VarChar(3)
+  duration        String  @db.VarChar(5)
+  remarks         String  @db.VarChar(30)
+}
