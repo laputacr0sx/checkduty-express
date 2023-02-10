@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
     res.json(users);
   } catch (error) {
     res.status(500).json({
-      message: "unable to reach db",
+      message: error.message,
     });
   }
 });
